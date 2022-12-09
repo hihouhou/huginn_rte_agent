@@ -6,21 +6,15 @@ module Agents
     default_schedule 'every_1h'
 
     description <<-MD
-      The Callisto Network Agent interacts with rpc server from Callisto Network and can create events / tasks if wanted / needed.
+      The Rte Agent interacts with the Rte api and can create events / tasks if wanted / needed.
 
-      The `type` can be like checking the wallet's balance.
+      The `type` can be like checking signals from Ecowatt.
 
-      The `wallet` is needed for interaction about balance for example.
+      The `id_client` is needed for asking a bearer token.
 
-      The `wallet_password` is needed for unlocking a wallet when you want to send CLO.
-
-      The `value` is needed when you want to send CLO.
-
-      The `wallet_dest` is needed  when you want to send CLO.
+      The `id_secret` is needed for asking a bearer token.
 
       The `debug` can add verbosity.
-
-      The `rpc_server` is needed for interaction with the api (per default thenode from callisto.network)
 
       Set `expected_update_period_in_days` to the maximum amount of time that you'd expect to pass between Events being created by this Agent.
 
